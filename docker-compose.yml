@@ -1,0 +1,46 @@
+version: '3.9'
+services:
+  postgres:
+    container_name: react-cms-bootstrap-postgres
+    image: postgres:13
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    networks:
+      - strapi
+    stdin_open: true
+    tty: true
+
+  #turborepo
+  turbo:
+    container_name: react-cms-bootstrap-turbo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - 5000:5000
+      - 3000:3000
+      - 1337:1337
+    volumes:
+      - ./:/app
+    depends_on:
+      - postgres
+    networks:
+      - strapi
+    stdin_open: true
+    tty: true
+volumes:
+  postgres:
+    name: strapi-db
+
+networks:
+  strapi:
+    name: Strapi
+    driver: bridge
