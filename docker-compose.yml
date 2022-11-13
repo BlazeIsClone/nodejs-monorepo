@@ -17,7 +17,6 @@ services:
     stdin_open: true
     tty: true
 
-  #turborepo
   turbo:
     container_name: react-cms-bootstrap-turbo
     build:

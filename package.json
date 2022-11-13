@@ -11,7 +11,8 @@
     "dev": "turbo run dev --parallel",
     "dev:docker": "docker-compose up -d",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "prettier": "^2.5.1",

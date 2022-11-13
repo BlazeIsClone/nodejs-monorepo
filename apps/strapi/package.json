@@ -6,7 +6,8 @@
     "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "test": "echo \"Warning: no test specified\" && exit 0"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.4.7",
