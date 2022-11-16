@@ -35,6 +35,7 @@ services:
       - strapi
     stdin_open: true
     tty: true
+
 volumes:
   postgres:
     name: strapi-db

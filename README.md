@@ -1,8 +1,19 @@
-# Turborepo + Strapi + Next.js + Docker + Typescript
+# React CMS Bootstrap
 
-## ⚠️ Prerequisites
+[![Turborepo](https://img.shields.io/badge/turborepo-EF4444?style=for-the-badge&logo=turborepo&logoColor=white)](https://turbo.build/)
+[![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white)](https://strapi.io/)
+[![NextJS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Typescript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-Please make sure you have Docker and docker-compose installed in your machine. Please refer here to install them :
+Components as packages and servers as applications.
 
-1. [Docker](https://docs.docker.com/engine/install/) installation
-2. [Docker compose](https://docs.docker.com/compose/install/) installation
+## Commands
+
+Start in container mode
+
+```bash
+npm run dev:docker
+```
+
+<br/>

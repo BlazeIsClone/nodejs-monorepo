@@ -1,0 +1,13 @@
+{
+	"name": "base-elements",
+	"version": "0.0.0",
+	"main": "./index.ts",
+	"types": "./index.ts",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^17.0.37",
+		"@types/react-dom": "^17.0.11",
+		"tsconfig": "*",
+		"typescript": "^4.5.3"
+	}
+}
