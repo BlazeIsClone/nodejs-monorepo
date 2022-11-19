@@ -1,6 +1,7 @@
 {
 	"typescript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.tsdk": "node_modules/typescript/lib",
+	"eslint.workingDirectories": ["./apps/t3"],
 	"search.exclude": {
 		"**/.git": true,
 		"**/node_modules": true,

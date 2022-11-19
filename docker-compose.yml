@@ -1,30 +1,33 @@
 version: '3.9'
 services:
+
   postgres:
-    container_name: react-cms-bootstrap-postgres
+    container_name: nodejs-monorepo-postgres
     image: postgres:13
     restart: unless-stopped
     ports:
       - 5432:5432
-    environment:
-      POSTGRES_DB: strapi
-      POSTGRES_USER: strapi
-      POSTGRES_PASSWORD: strapi
     volumes:
+      - ./configs/postgres:/docker-entrypoint-initdb.d
       - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_MULTIPLE_DATABASES: service_database, strapi, t3
+      POSTGRES_USER: db_user
+      POSTGRES_PASSWORD: db_pass
     networks:
-      - strapi
+      - internal
     stdin_open: true
     tty: true
 
   turbo:
-    container_name: react-cms-bootstrap-turbo
+    container_name: nodejs-monorepo-turbo
     build:
       context: .
       dockerfile: Dockerfile
     restart: on-failure
     ports:
       - 5000:5000
+      - 5100:5100
       - 3000:3000
       - 1337:1337
     volumes:
@@ -32,7 +35,7 @@ services:
     depends_on:
       - postgres
     networks:
-      - strapi
+      - internal
     stdin_open: true
     tty: true
 
@@ -41,6 +44,6 @@ volumes:
     name: strapi-db
 
 networks:
-  strapi:
-    name: Strapi
+  internal:
+    name: Internal
     driver: bridge

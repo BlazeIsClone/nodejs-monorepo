@@ -12,6 +12,6 @@ RUN npm ci
 
 COPY . .
 
-EXPOSE 3000 1337 5000
+EXPOSE 3000-8000
 
 CMD turbo run dev --parallel
