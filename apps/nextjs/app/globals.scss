@@ -1,0 +1,6 @@
+@use 'base-styles/config' as config;
+
+body {
+	background-color: config.$secondary-color;
+	color: config.$on-secondary-color;
+}

@@ -1,0 +1,33 @@
+@use 'base-styles/config' as config;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 90vh;
+
+	.logo {
+		filter: drop-shadow(0 0 4em config.$primary-color);
+	}
+
+	h1 {
+		font-weight: 800;
+		margin-bottom: 20px;
+		font-size: 24px;
+		color: config.$primary-color;
+	}
+
+	a {
+		margin-top: 25px;
+
+		button {
+			padding: 16px 62px;
+			cursor: pointer;
+		}
+	}
+
+	p {
+		font-weight: 600;
+	}
+}

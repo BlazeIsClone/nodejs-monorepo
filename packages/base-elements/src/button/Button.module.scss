@@ -1,3 +1,5 @@
+@use 'base-styles/config' as config;
+
 .button {
-	content: '';
+	background-color: config.$primary-color;
 }

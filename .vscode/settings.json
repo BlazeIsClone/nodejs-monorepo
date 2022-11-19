@@ -1,8 +1,9 @@
 {
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "search.exclude": {
-    "**/.git": true,
-    "**/node_modules": true,
-    "**/build": true
-  }
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"search.exclude": {
+		"**/.git": true,
+		"**/node_modules": true,
+		"**/build": true
+	}
 }
